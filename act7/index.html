@@ -49,7 +49,7 @@
   </div>
 
   <div class="text-center mt-4" id="noResults">
-    <p class="text-danger fs-5">No characters found 🥲</p>
+    <p class="text-danger fs-5">No characters found</p>
   </div>
 </div>
 
@@ -80,17 +80,19 @@
       const card = document.createElement('div');
       card.className = 'col-sm-6 col-md-4 col-lg-3 mb-4';
       card.innerHTML = `
-        <div class="card h-100 shadow-sm">
-          <img src="${char.image}" class="card-img-top" alt="${char.name}">
-          <div class="card-body">
-            <h5 class="card-title">${char.name}</h5>
-            <p class="card-text">
-              <strong>Status:</strong> ${char.status}<br>
-              <strong>Species:</strong> ${char.species}<br>
-              <strong>Gender:</strong> ${char.gender}
-            </p>
+        <a href="view.html?id=${char.id}" class="text-decoration-none text-dark">
+          <div class="card h-100 shadow-sm">
+            <img src="${char.image}" class="card-img-top" alt="${char.name}">
+            <div class="card-body">
+              <h5 class="card-title">${char.name}</h5>
+              <p class="card-text">
+                <strong>Status:</strong> ${char.status}<br>
+                <strong>Species:</strong> ${char.species}<br>
+                <strong>Gender:</strong> ${char.gender}
+              </p>
+            </div>
           </div>
-        </div>
+        </a>
       `;
       characterContainer.appendChild(card);
     });
@@ -103,14 +105,15 @@
 
   fetchCharacters();
 </script>
+
 <footer class="text-light py-3 fixed-bottom">
-    <div class="container">
-        <div class="row text-center text-md-start align-items-center">
-            <div class="col-md-6 mb-2 mb-md-0">
-                <a href="../index.html" class="btn btn-primary">Back</a>
-            </div>
-        </div>
+  <div class="container">
+    <div class="row text-center text-md-start align-items-center">
+      <div class="col-md-6 mb-2 mb-md-0">
+        <a href="../index.html" class="btn btn-primary">Back</a>
+      </div>
     </div>
+  </div>
 </footer>
 </body>
 </html>
