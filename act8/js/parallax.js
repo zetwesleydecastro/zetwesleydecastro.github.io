@@ -1,18 +1,20 @@
 function castParallax() {
-	const layers = document.getElementsByClassName("parallax");
 
-	function updateLayers() {
-		const top = window.pageYOffset;
-		for (let i = 0; i < layers.length; i++) {
-			let layer = layers[i];
-			let speed = layer.getAttribute('data-speed');
-			let yPos = -(top * speed / 100);
-			layer.style.transform = `translate3d(0px, ${yPos}px, 0px)`;
+	var opThresh = 350;
+	var opFactor = 750;
+
+	window.addEventListener("scroll", function (event) {
+		var top = this.pageYOffset;
+
+		var layers = document.getElementsByClassName("parallax");
+		var layer, speed, yPos;
+		for (var i = 0; i < layers.length; i++) {
+			layer = layers[i];
+			speed = layer.getAttribute('data-speed');
+			var yPos = -(top * speed / 100);
+			layer.setAttribute('style', 'transform: translate3d(0px, ' + yPos + 'px, 0px)');
 		}
-		requestAnimationFrame(updateLayers);
-	}
-
-	requestAnimationFrame(updateLayers);
+	});
 }
 
 function dispelParallax() {
@@ -29,16 +31,19 @@ function castSmoothScroll() {
 }
 
 function startSite() {
-	const platform = navigator.platform.toLowerCase();
+	var platform = navigator.platform.toLowerCase();
+	var userAgent = navigator.userAgent.toLowerCase();
 
-	if (platform.includes('ipad') || platform.includes('iphone')) {
+	if (platform.indexOf('ipad') != -1 || platform.indexOf('iphone') != -1) {
 		dispelParallax();
-	} else {
+	} else if (platform.indexOf('win32') != -1 || platform.indexOf('linux') != -1) {
 		castParallax();
-		if ($.browser?.webkit) {
+		if ($.browser.webkit) {
 			castSmoothScroll();
 		}
+	} else {
+		castParallax();
 	}
 }
 
-document.body.onload = startSite;
+document.body.onload = startSite();
