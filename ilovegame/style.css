@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#instructionNote {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+    z-index: 2000;
+    text-align: center;
+    font-weight: bold;
+}
+
+#maze {
+    position: relative;
+    width: 90vw;
+    height: 90vw;
+    max-width: 400px;
+    max-height: 400px;
+    background: #fff;
+    border: 5px solid #000;
+    touch-action: none;
+}
+
+.wall {
+    position: absolute;
+    background: #000;
+}
+
+#player {
+    position: absolute;
+    width: 6%;
+    height: 6%;
+    background: red;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    touch-action: none;
+}
+
+#exit {
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    background: green;
+    bottom: 0;
+    right: 0;
+}
+
+#scaryContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#scaryContainer img {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+#levelIndicator {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    color: white;
+    font-size: 18px;
+    z-index: 2000;
+}
+
+#levelComplete {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1500;
+    display: none;
+}
+
+#levelComplete img {
+    max-width: 80%;
+    max-height: 80%;
+    width: auto;
+    height: auto;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px #fff;
+    display: none;
+}
+
+#downloadContainer {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2000;
+}
+
+#downloadButton {
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#downloadButton:hover {
+    background-color: #218838;
+}

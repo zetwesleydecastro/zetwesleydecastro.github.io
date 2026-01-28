@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Upcoming Olympic Events</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .navbar-custom {
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F4C300 !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #FFC107 !important;
+            font-weight: 600;
+        }
+
+        #events .card-img-overlay h3,
+        #events .card-img-overlay p {
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        #events .card {
+            border-radius: 15px;
+            overflow: hidden;
+            transition: transform 0.3s;
+            height: 400px;
+        }
+
+        #events .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        #events .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #events {
+            background-color: #f8f9fa;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        @media (max-width: 768px) {
+            #events .card-img-overlay h3 {
+                font-size: 1.2rem;
+            }
+
+            #events .card-img-overlay p {
+                font-size: 0.85rem;
+            }
+
+            #events .card {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #events .card {
+                height: 250px;
+            }
+        }
+
+        #events .info-text {
+            margin-top: 2rem;
+        }
+
+        #events .info-text p.lead {
+            font-size: 1.25rem;
+            color: #1a73e8;
+        }
+
+        #events .info-text p span {
+            color: #f4c300;
+            font-weight: bold;
+        }
+
+        #events .tokyo-note p span {
+            color: #f4c300;
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: #212529;
+            color: #fff;
+        }
+
+        footer a {
+            color: #fff;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #f0ad4e;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Olympic Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="athletes.html">Athletes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="events" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Upcoming Olympic Events</h2>
+
+            <div id="eventsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/paris.jpg" class="d-block" alt="Paris 2024">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h3 class="card-title">Paris 2024</h3>
+                                <p class="card-text">Opening Ceremony - 26 July 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/los angeles.jpg" class="d-block" alt="Los Angeles 2028">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h3 class="card-title">Los Angeles 2028</h3>
+                                <p class="card-text">Opening Ceremony - 14 July 2028</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/brisbane.jpg" class="d-block" alt="Brisbane 2032">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h3 class="card-title">Brisbane 2032</h3>
+                                <p class="card-text">Opening Ceremony - 23 July 2032</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/coming soon.jpg" class="d-block" alt="2036 TBD">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h3 class="card-title">2036 TBD</h3>
+                                <p class="card-text">Dates & Venues To Be Announced</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card bg-dark text-white text-center">
+                            <img src="img/coming soon.jpg" class="d-block" alt="2040 TBD">
+                            <div class="card-img-overlay d-flex flex-column justify-content-center">
+                                <h3 class="card-title">2040 TBD</h3>
+                                <p class="card-text">Dates & Venues To Be Announced</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#eventsCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#eventsCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <div class="info-text text-center">
+                <p class="lead">
+                    The Olympic Games are coming to a city near you! Celebrate the spirit of <span>global unity</span>
+                    through
+                    sports.
+                </p>
+                <p>
+                    From <span>Paris 2024</span> to <span>Brisbane 2032</span> and beyond, each Games promises thrilling
+                    competitions, inspiring athletes, and unforgettable memories.
+                </p>
+            </div>
+
+            <div class="tokyo-note text-center mt-5">
+                <p class="fst-italic">
+                    Note: The <span>Tokyo 2020 Olympics</span> were postponed to 2021 due to the COVID-19 pandemic, yet
+                    they
+                    delivered unforgettable moments and historic achievements.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2026 Olympic Por. All rights reserved.</p>
+        <div>
+            <i class="fab fa-facebook mx-2"></i>
+            <i class="fab fa-twitter mx-2"></i>
+            <i class="fab fa-instagram mx-2"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

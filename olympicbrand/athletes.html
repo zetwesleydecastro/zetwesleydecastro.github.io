@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Famous Olympic Athletes</title>
+    <link rel="icon" href="img/logo.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        #athletes .container .card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #athletes .container .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        #athletes .card-img-top {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        #athletes .card-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        #athletes .card-text {
+            color: #555;
+        }
+
+        #athletes {
+            background-color: #f8f9fa;
+        }
+
+        footer i {
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        footer i:hover {
+            color: #ffcc00;
+        }
+
+        .navbar-custom {
+            background-color: rgba(0, 0, 0, 0.75);
+            backdrop-filter: blur(5px);
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #F4C300 !important;
+        }
+
+        .navbar-nav .nav-link.active {
+            color: #FFC107 !important;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Olympic Portal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="athletes.html">Athletes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="history.html">History</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="athletes" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Famous Olympic Athletes</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/michael phelps.jpg" class="card-img-top" alt="Michael Phelps">
+                        <div class="card-body">
+                            <h5 class="card-title">Michael Phelps</h5>
+                            <p class="card-text">Swimming - USA</p>
+                            <p class="card-text"><small>Champion Year: 2004, 2008, 2012, 2016</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/usain Bolt.jpg" class="card-img-top" alt="Usain Bolt">
+                        <div class="card-body">
+                            <h5 class="card-title">Usain Bolt</h5>
+                            <p class="card-text">Track & Field - Jamaica</p>
+                            <p class="card-text"><small>Champion Year: 2008, 2012, 2016</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/simone b.jpg" class="card-img-top" alt="Simone Biles">
+                        <div class="card-body">
+                            <h5 class="card-title">Simone Biles</h5>
+                            <p class="card-text">Gymnastics - USA</p>
+                            <p class="card-text"><small>Champion Year: 2016</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/carl lewis.jpg" class="card-img-top" alt="Carl Lewis">
+                        <div class="card-body">
+                            <h5 class="card-title">Carl Lewis</h5>
+                            <p class="card-text">Track & Field - USA</p>
+                            <p class="card-text"><small>Champion Year: 1984, 1988, 1992</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/nadia.jpg" class="card-img-top" alt="Nadia Comăneci">
+                        <div class="card-body">
+                            <h5 class="card-title">Nadia Comăneci</h5>
+                            <p class="card-text">Gymnastics - Romania</p>
+                            <p class="card-text"><small>Champion Year: 1976</small></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="img/katie dedecky.jpg" class="card-img-top" alt="Katie Ledecky">
+                        <div class="card-body">
+                            <h5 class="card-title">Katie Ledecky</h5>
+                            <p class="card-text">Swimming - USA</p>
+                            <p class="card-text"><small>Champion Year: 2012, 2016, 2020</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2026 Olympic Por. All rights reserved.</p>
+        <div>
+            <i class="fab fa-facebook mx-2"></i>
+            <i class="fab fa-twitter mx-2"></i>
+            <i class="fab fa-instagram mx-2"></i>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
